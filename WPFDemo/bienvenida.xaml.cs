@@ -15,28 +15,20 @@ using System.Windows.Shapes;
 namespace WPFDemo
 {
     /// <summary>
-    /// Interaction logic for login.xaml
+    /// Interaction logic for bienvenida.xaml
     /// </summary>
-    public partial class login : Window
+    public partial class bienvenida : Window
     {
-        public login()
+        public bienvenida()
         {
             InitializeComponent();
         }
 
-        private void btnIngresar_Click(object sender, RoutedEventArgs e)
+        private void btnCerrarSesion_Click(object sender, RoutedEventArgs e)
         {
-            if (txtUsuario.Text=="hugo" & txtContrasena.Password=="123456")
-            {
-                bienvenida form1 = new bienvenida();
-                form1.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("Inténtalo de nuevo");
-
-            }
+            login form1 = new login();
+            form1.Show();
+            this.Close();
         }
     }
 }
